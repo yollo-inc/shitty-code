@@ -1,0 +1,9 @@
+export const S100 = 8
+export const S200 = S100 * 2
+export const S300 = S100 * 3
+export const S400 = S100 * 4
+export const S500 = S100 * 5
+export const S600 = S100 * 6
+export const S700 = S100 * 7
+export const S800 = S100 * 8
+export const S900 = S100 * 9

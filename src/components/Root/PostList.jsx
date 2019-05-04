@@ -1,11 +1,16 @@
 import React from 'react'
 import PostItem from './PostItem'
+import styled from 'styled-components'
+
+const Container = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`
 
 export default function PostsList({ posts }) {
   return (
-    <div>
-      <h1>Posts</h1>
+    <Container>
       {posts.map(post => <PostItem {...post} />)}
-    </div>
+    </Container>
   )
 }
