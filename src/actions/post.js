@@ -11,7 +11,7 @@ export const changePost = (dataHash) => {
 
 export const postPost = () => {
   return(dispatch, getState) => {
-    return axios.post("__REPLACE_ME__", {
+    return axios.post("https://us-central1-shitty-code.cloudfunctions.net/postPost", {
       params: {
         data: {
           body: {
