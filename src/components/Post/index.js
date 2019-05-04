@@ -23,6 +23,7 @@ class Post extends React.Component {
   }
 
   render() {
+    const { posts } = this.state
     return (
       <form>
         <h1>post</h1>
