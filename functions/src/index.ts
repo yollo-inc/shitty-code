@@ -13,7 +13,6 @@ db.settings(settings);
 
 exports.postPost = functions.https.onCall((data, context) => {
   try {
-    var postRef = db.collection('posts').doc();
     db.collection('posts').add({
       title: data.body.title,
       language: data.body.language,

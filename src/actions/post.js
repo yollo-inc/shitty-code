@@ -15,6 +15,7 @@ export const postPost = () => {
       data: {
         body: {
           title: getState().postReducer.title,
+          language: getState().postReducer.language,
           code: getState().postReducer.code,
           description: getState().postReducer.description
         }
