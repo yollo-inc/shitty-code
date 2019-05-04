@@ -1,6 +1,7 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { connect } from 'react-redux'
+import Layout from 'components/Layout'
 import { changePost, postPost } from 'actions/post'
 
 class Post extends React.Component {
@@ -24,42 +25,44 @@ class Post extends React.Component {
 
   render() {
     return (
-      <form>
-        <h1>post</h1>
-        <div>
-          <label htmlFor="title">title</label>
-          <input type="text"
-                 name="title"
-                 value={this.props.title}
-                 onChange={(e) => this.handleChange(e)}/>
-        </div>
-        <div>
-          <label htmlFor="language">language</label>
-          <input type="text"
-                 name="language"
-                 value={this.props.language}
-                 onChange={(e) => this.handleChange(e)}/>
-        </div>
-        <div>
-          <label htmlFor="code">code</label>
-          <textarea name="code"
-                    rows={10}
-                    placeholder="Please write down shitty code here."
-                    value={this.props.code}
-                    onChange={(e) => this.handleChange(e)}/>
-        </div>
-        <div>
-          <label htmlFor="description">description</label>
-          <textarea name="description"
-                    rows={5}
-                    placeholder="write the appeal point."
-                    value={this.props.description}
-                    onChange={(e) => this.handleChange(e)}/>
-        </div>
-        <div>
-          <button onClick={(e) => this.handleSubmit(e)}>send</button>
-        </div>
-      </form>
+      <Layout>
+        <form>
+          <h1>post</h1>
+          <div>
+            <label htmlFor="title">title</label>
+            <input type="text"
+                   name="title"
+                   value={this.props.title}
+                   onChange={(e) => this.handleChange(e)}/>
+          </div>
+          <div>
+            <label htmlFor="language">language</label>
+            <input type="text"
+                   name="language"
+                   value={this.props.language}
+                   onChange={(e) => this.handleChange(e)}/>
+          </div>
+          <div>
+            <label htmlFor="code">code</label>
+            <textarea name="code"
+                      rows={10}
+                      placeholder="Please write down shitty code here."
+                      value={this.props.code}
+                      onChange={(e) => this.handleChange(e)}/>
+          </div>
+          <div>
+            <label htmlFor="description">description</label>
+            <textarea name="description"
+                      rows={5}
+                      placeholder="write the appeal point."
+                      value={this.props.description}
+                      onChange={(e) => this.handleChange(e)}/>
+          </div>
+          <div>
+            <button onClick={(e) => this.handleSubmit(e)}>send</button>
+          </div>
+        </form>
+      </Layout>
     )
   }
 }
