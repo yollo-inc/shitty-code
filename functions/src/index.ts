@@ -1,7 +1,11 @@
 const functions = require('firebase-functions');
 const admin = require('firebase-admin');
 
-admin.initializeApp(functions.config().firebase);
+admin.initializeApp({
+  apiKey: 'AIzaSyABhPsApnc224WoMPiqQhIBCcAQk6o73E8',
+  authDomain: 'shitty-code.firebaseapp.com',
+  projectId: 'shitty-code'
+});
 
 const db = admin.firestore();
 const settings = {/* your settings... */ timestampsInSnapshots: true};
