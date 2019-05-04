@@ -3,14 +3,18 @@ import { render } from 'react-dom'
 import { connect } from 'react-redux'
 import styled from 'styled-components'
 import Header from './Header'
+import { media } from 'utils/media'
 
 const Container = styled.div`
 `
 const Main = styled.main`
   padding: 0 18px;
-  max-width: 597px;
-  min-width: 320px;
+  max-width: 970px;
   margin: 72px auto 0;
+  ${ media.sp`
+    padding: 0 12px;
+    margin: 36px auto 0;
+  `}
 `
 class Layout extends React.Component {
 

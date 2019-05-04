@@ -3,10 +3,14 @@ import { render } from 'react-dom'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import { media } from 'utils/media'
 
 const Container = styled.header`
   height: 84px;
   box-shadow: 0 1px #e6e8eb;
+  ${ media.sp`
+    height: 60px;
+  `}
 `
 const Border = styled.div`
   height: 6px;
@@ -17,9 +21,12 @@ const Inner = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100%;
+  height: calc(100% - 6px);
   max-width: 1280px;
   padding: 0 36px;
+  ${ media.sp`
+    padding: 0 12px;
+  `}
 `
 const Logo = styled(Link)`
   h1 {
@@ -42,6 +49,11 @@ const PostButton = styled(Link)`
   white-space: nowrap;
   border-radius: 9px;
   padding: 0 3px;
+  ${ media.sp`
+    min-width: 100px;
+    height: 36px;
+    line-height: 30px;
+  `}
 `
 class Header extends React.Component {
 
