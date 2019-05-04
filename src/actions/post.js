@@ -12,13 +12,11 @@ export const changePost = (dataHash) => {
 export const postPost = () => {
   return(dispatch, getState) => {
     return axios.post("https://us-central1-shitty-code.cloudfunctions.net/postPost", {
-      params: {
-        data: {
-          body: {
-            title: getState().postReducer.title,
-            code: getState().postReducer.code,
-            description: getState().postReducer.description
-          }
+      data: {
+        body: {
+          title: getState().postReducer.title,
+          code: getState().postReducer.code,
+          description: getState().postReducer.description
         }
       }
     })
