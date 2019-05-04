@@ -35,7 +35,6 @@ export default function PostItem({ title, language, code, description }) {
       </ContentContainer>
       <SyntaxHighlighter style={tomorrowNight} language={language} showLineNumbers customStyle={{ padding: S200, fontSize: fontSizes.medium, lineHeight: 1.8 }}>
         {code}
-        <Text color="white">{language}</Text>
       </SyntaxHighlighter>
       <ContentContainer>
         <Text>{description}</Text>

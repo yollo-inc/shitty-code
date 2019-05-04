@@ -10,7 +10,7 @@ const Container = styled.div`
 export default function PostsList({ posts }) {
   return (
     <Container>
-      {posts.map(post => <PostItem {...post} />)}
+      {posts.map(post => <PostItem {...post} key={post.title} />)}
     </Container>
   )
 }

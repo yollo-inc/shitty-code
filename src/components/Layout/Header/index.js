@@ -20,6 +20,7 @@ const Border = styled.div`
 const Inner = styled.div`
   display: flex;
   justify-content: space-between;
+  margin: 0 auto;
   align-items: center;
   height: calc(100% - 6px);
   max-width: 1280px;
