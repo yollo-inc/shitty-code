@@ -21,10 +21,13 @@ exports.postPost = functions.https.onCall((data, context) => {
     })
     .then(function(docRef) {
       console.log("Document written with ID: ", docRef.id);
+      return true
     })
     .catch(function(error) {
       console.error("Error adding document: ", error);
+      throw new functions.https.HttpsError('internal', 'Something went wrong.', data.body)
     })
+    return { text: 'add unko code success.' }
   } catch(error) {
     console.log('Failure in postPost');
     console.log(error);
