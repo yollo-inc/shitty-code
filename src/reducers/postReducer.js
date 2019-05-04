@@ -1,5 +1,6 @@
 const initialState = {
   title: '',
+  language: '',
   code: '',
   description: '',
 }

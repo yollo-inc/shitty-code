@@ -34,6 +34,13 @@ class Post extends React.Component {
                  onChange={(e) => this.handleChange(e)}/>
         </div>
         <div>
+          <label htmlFor="language">language</label>
+          <input type="text"
+                 name="language"
+                 value={this.props.language}
+                 onChange={(e) => this.handleChange(e)}/>
+        </div>
+        <div>
           <label htmlFor="code">code</label>
           <textarea name="code"
                     rows={10}
@@ -60,6 +67,7 @@ class Post extends React.Component {
 function mapStateToProps(state) {
   return {
     title: state.postReducer.title,
+    language: state.postReducer.language,
     code: state.postReducer.code,
     description: state.postReducer.description,
   }
