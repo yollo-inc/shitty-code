@@ -3,6 +3,7 @@ import { render } from 'react-dom'
 import { connect } from 'react-redux'
 import PostsList from './PostList'
 import { db } from '../../utils/firebaseClient'
+import Layout from '../Layout'
 
 class Root extends React.Component {
 
@@ -28,7 +29,9 @@ class Root extends React.Component {
   render() {
     const { posts } = this.state
     return (
-      <PostsList posts={posts} />
+      <Layout>
+        <PostsList posts={posts} />
+      </Layout>
     )
   }
 }
